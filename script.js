@@ -19,6 +19,23 @@ function createNotes (noteText) {
         .then(data => console.log(data))
 }
 
+const noteList = document.querySelector('note-list')
+
+fetch(url, {
+    method: 'GET',
+})
+    .then(res => res.json())
+    .then(data => {
+        for (note of data){
+            console.log(note.item)
+            const itemElement = document.createElement('li')
+            itemElement.innerText = note.item
+            noteList.appendChild(itemElement)
+        }
+    })
+
+
+
 
 
 
