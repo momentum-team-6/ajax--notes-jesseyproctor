@@ -19,7 +19,7 @@ function createNotes (noteText) {
         .then(data => console.log(data))
 }
 
-const noteList = document.querySelector('note-list')
+const noteList = document.querySelector('#note-list')
 
 fetch(url, {
     method: 'GET',
